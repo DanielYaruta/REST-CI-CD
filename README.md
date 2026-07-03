@@ -1,19 +1,12 @@
 # Task Manager REST API
 
+[![Java](https://img.shields.io/badge/Java-17-blue?logo=openjdk)](https://adoptium.net/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.5-brightgreen?logo=springboot)](https://spring.io/projects/spring-boot)
 [![Maven CI](https://github.com/DanielYaruta/REST-CI-CD/actions/workflows/maven-ci.yml/badge.svg)](https://github.com/DanielYaruta/REST-CI-CD/actions/workflows/maven-ci.yml)
 [![Checkstyle](https://github.com/DanielYaruta/REST-CI-CD/actions/workflows/checkstyle.yml/badge.svg)](https://github.com/DanielYaruta/REST-CI-CD/actions/workflows/checkstyle.yml)
 [![SpotBugs](https://github.com/DanielYaruta/REST-CI-CD/actions/workflows/spotbugs.yml/badge.svg)](https://github.com/DanielYaruta/REST-CI-CD/actions/workflows/spotbugs.yml)
-[![Java](https://img.shields.io/badge/Java-17-blue?logo=openjdk)](https://adoptium.net/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.5-brightgreen?logo=springboot)](https://spring.io/projects/spring-boot)
 
 Простой REST-сервис для управления списком задач на Spring Boot с настроенным CI/CD через GitHub Actions.
-
-## Стек
-
-- **Java 17**
-- **Spring Boot 3.2.5** (Spring Web, Spring Boot Test)
-- **Maven 3.6+**
-- **GitHub Actions** — Maven CI, Checkstyle, SpotBugs
 
 ## Быстрый старт
 
