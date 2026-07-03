@@ -29,7 +29,7 @@ jobs:
         continue-on-error: true
 
       - name: Annotate PR with Checkstyle Results
-        uses: jwgmeligmeyling/checkstyle-github-action@master
+        uses: jwgmeligmeyling/checkstyle-github-action@50292990e18466f2c5d95d04ff5fab931254fa5f # v1.2
         if: always()
         with:
           path: '**/target/checkstyle-result.xml'
