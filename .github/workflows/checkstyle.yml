@@ -1,0 +1,38 @@
+name: Checkstyle
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
+jobs:
+  checkstyle:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Generate Checkstyle Report
+        run: mvn checkstyle:checkstyle --no-transfer-progress
+        continue-on-error: true
+
+      - name: Annotate PR with Checkstyle Results
+        uses: jwgmeligmeyling/checkstyle-github-action@master
+        if: always()
+        with:
+          path: '**/target/checkstyle-result.xml'
+
+      - name: Fail on Checkstyle Violations
+        run: mvn checkstyle:check --no-transfer-progress
